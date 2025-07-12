@@ -38,8 +38,8 @@ resource "aws_ecs_service" "task2-service" {
   depends_on = [
     aws_lb_listener.http_listener # Зависимость от слушателя
   ]
-  lifecycle {
-    ignore_changes = [task_definition]
-  }
+  # lifecycle {
+  #   ignore_changes = [task_definition]
+  # }
 }
 
